@@ -1,16 +1,9 @@
 package com.udacity.asteroidradar.api
 
-import androidx.lifecycle.LiveData
-import com.udacity.asteroidradar.Asteroid
 import com.udacity.asteroidradar.Constants
-import com.udacity.asteroidradar.Constants.API_KEY
-import com.udacity.asteroidradar.Constants.BASE_URL
-import kotlinx.coroutines.Deferred
+import com.udacity.asteroidradar.api.domain.Asteroid
+import com.udacity.asteroidradar.database.DatabaseAsteroid
 import org.json.JSONObject
-import retrofit2.Retrofit
-import retrofit2.converter.scalars.ScalarsConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Query
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -65,4 +58,36 @@ private fun getNextSevenDaysFormattedDates(): ArrayList<String> {
     }
 
     return formattedDateList
+}
+
+fun getToday(): String {
+    val calendar = Calendar.getInstance()
+    return formatDate(calendar.time)
+}
+
+fun getSeventhDay(): String {
+    val calendar = Calendar.getInstance()
+    calendar.add(Calendar.DAY_OF_YEAR, 7)
+    return formatDate(calendar.time)
+}
+
+private fun formatDate(date: Date): String {
+    val dateFormat = SimpleDateFormat(Constants.API_QUERY_DATE_FORMAT, Locale.getDefault())
+    return dateFormat.format(date)
+}
+
+fun ArrayList<Asteroid>.asDomainModel(): Array<DatabaseAsteroid> {
+    return map {
+        DatabaseAsteroid(
+            id = it.id,
+            codename = it.codename,
+            closeApproachDate = it.closeApproachDate,
+            absoluteMagnitude = it.absoluteMagnitude,
+            estimatedDiameter = it.estimatedDiameter,
+            relativeVelocity = it.relativeVelocity,
+            distanceFromEarth = it.distanceFromEarth,
+            isPotentiallyHazardous = it.isPotentiallyHazardous
+        )
+    }
+        .toTypedArray()
 }

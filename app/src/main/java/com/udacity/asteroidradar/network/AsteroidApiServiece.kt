@@ -3,9 +3,11 @@ package com.udacity.asteroidradar.api
 import androidx.lifecycle.LiveData
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import com.udacity.asteroidradar.Asteroid
 import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.api.domain.Asteroid
+import com.udacity.asteroidradar.network.NetworkAsteroidContainer
 import kotlinx.coroutines.Deferred
+import okhttp3.ResponseBody
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
@@ -18,8 +20,8 @@ interface AsteroidApiService {
     fun getAsteroids(
         @Query("start_date") start_date: String,
         @Query("end_date") end_date: String,
-        @Query("api_key") api_key: String = Constants.API_KEY
-    ): Deferred<LiveData<List<Asteroid>>>
+        @Query("api_key") api_key: String
+    ): Deferred<ResponseBody>
 }
 
 

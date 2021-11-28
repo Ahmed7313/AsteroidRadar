@@ -28,14 +28,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf7f917-9067-42b9-bcca-3b3f81855f36" name="Default Changelist" comment="asf">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/api/domain/Models.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/database/DatabaseEntities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/database/Room.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/DataTransfereObject.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/repository/AsteroidsRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/api/AsteroidApiServiece.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/AsteroidApiServiece.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/api/NetworkUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/NetworkUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/Asteroid.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/database/DatabaseEntities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/database/DatabaseEntities.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/detail/DetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/detail/DetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/AsteroidAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/AsteroidAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/MainFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/main/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/AsteroidApiServiece.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/AsteroidApiServiece.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/DataTransfereObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/DataTransfereObject.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/NetworkUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/asteroidradar/network/NetworkUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/asteroid_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/asteroid_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +74,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dyvbytes8" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.udacity.asteroidradar.main.repository" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.udacity.asteroidradar" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ahmed\OneDrive\Desktop\Android Projects\project2 - Asteroid App\app\src\main\res\values" />
     </key>
@@ -153,6 +164,14 @@
       <option name="presentableId" value="Default" />
       <updated>1637614088574</updated>
     </task>
+    <task id="LOCAL-00001" summary="asf">
+      <created>1637796106677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637796106677</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,16 +191,34 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="asf" />
+    <option name="LAST_COMMIT_MESSAGE" value="asf" />
   </component>
   <component name="WindowStateProjectService">
     <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1637700763610">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1637700763610" />
+    <state x="279" y="354" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1638121851613">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="279" y="354" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.860@0.0.1600.860" timestamp="1638121851613" />
+    <state x="595" y="311" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1638121853090">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="595" y="311" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1600.860@0.0.1600.860" timestamp="1638121853090" />
     <state x="361" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1637699722227">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="361" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1637699722227" />
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1638020168903">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1638020168903" />
+    <state x="572" y="221" width="457" height="418" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1638121844251">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="572" y="221" width="457" height="418" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1638121844251" />
     <state x="380" y="184" key="AndroidCreateResourceDirectoryDialog" timestamp="1637787865699">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -190,10 +227,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="184" key="AndroidCreateResourceFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1637694130590" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1637781000318">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1638119283777">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1637781000318" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1638119283777" />
     <state x="667" y="327" width="266" height="277" key="Github.ShareDialog" timestamp="1637781568967">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
